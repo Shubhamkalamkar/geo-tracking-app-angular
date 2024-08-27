@@ -13,27 +13,6 @@ export const routes: Routes = [
             (c) => c.LoginComponent
           ),
       },
-      {
-        path: 'sign-up',
-        loadComponent: () =>
-          import('./auth/components/sign-up/sign-up.component').then(
-            (c) => c.SignUpComponent
-          ),
-      },
-      {
-        path: 'reset-password/:token',
-        loadComponent: () =>
-          import(
-            './auth/components/reset-password/reset-password.component'
-          ).then((c) => c.ResetPasswordComponent),
-      },
-      {
-        path: 'forgot-password',
-        loadComponent: () =>
-          import(
-            './auth/components/forgot-password/forgot-password.component'
-          ).then((c) => c.ForgotPasswordComponent),
-      },
     ],
   },
   {
