@@ -1,0 +1,25 @@
+mat-card {
+    mat-card-header {
+      justify-content: center;
+      padding: 3rem;
+    }
+    mat-card-actions {
+      justify-content: center;
+      padding: 2rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
+    mat-icon{
+      height: 20px;
+    }
+    ::ng-deep .mat-mdc-card-content {
+        display: flex !important;
+        justify-content: center !important;
+      }
+      
+    .form-control{
+        width: 60%;
+    }
+  }
+  

@@ -1,0 +1,62 @@
+<form [formGroup]="addMemberForm" (ngSubmit)="onSubmit()">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Add New Member</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="form-control">
+        <mat-label>Full Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            formControlName="name"
+            placeholder="Enter full name"
+          />
+          <mat-error> Name is required </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-control">
+        <mat-label>Email</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="email"
+            formControlName="email"
+            placeholder="Enter email"
+          />
+          <mat-error> Please enter a valid email </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-control">
+        <mat-label>Phone Number</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            formControlName="phone"
+            placeholder="Enter phone number"
+          />
+          <mat-error> Phone number is required </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-control">
+        <mat-label>Address</mat-label>
+        <mat-form-field appearance="outline">
+          <textarea
+            matInput
+            formControlName="address"
+            placeholder="Enter address"
+          ></textarea>
+          <mat-error> Address is required </mat-error>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" type="submit">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

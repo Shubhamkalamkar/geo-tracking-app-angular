@@ -1,0 +1,65 @@
+<div class="container">
+<form [formGroup]="shopDetails" (ngSubmit)="onSubmit()">
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title> Enter shop details </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="form-control">
+          <label>Shop Name</label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              type="text"
+              formControlName="shopName"
+              placeholder="Shop Name"
+            />
+            <mat-error>shop name is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-control">
+          <label>Shop Address</label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              type="text"
+              formControlName="shopAddress"
+              placeholder="Shop Address"
+            />
+            <mat-error>shop address is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-control">
+          <label>Pincode</label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              type="number"
+              formControlName="pincode"
+              (input)="trimNumber($event)"
+              placeholder="pincode"
+            />
+            <mat-error>pincode is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-control">
+          <label>Shop Type</label>
+          <mat-form-field appearance="outline">
+            <input
+              matInput
+              type="text"
+              formControlName="shopType"
+              placeholder="Shop Type"
+            />
+            <mat-error>shop type is required</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="button">
+          <button mat-flat-button color="primary" type="submit">Save</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

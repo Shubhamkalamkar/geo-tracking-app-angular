@@ -1,0 +1,24 @@
+<div class="member-list-container">
+    <h2>Member List</h2>
+  
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search member"
+        [(ngModel)]="searchText"
+        (ngModelChange)="onSearchChange()"
+      />
+    </div>
+  
+    <ul>
+      <li *ngFor="let member of filteredMembers">
+        {{ member.name }}
+      </li>
+    </ul>
+  
+    <!-- Floating + Icon -->
+    <button mat-fab color="primary" class="add-button" (click)="onAddClick()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  

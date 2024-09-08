@@ -1,0 +1,23 @@
+<div class="page-container">
+    <div class="content-container">
+      <router-outlet></router-outlet>
+    </div>
+    <nav class="bottom-nav">
+      <button (click)="setActive('dashboard')" [class.active]="activePage === 'dashboard'">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button
+        (click)="setActive('memberlist')"
+        [class.active]="activePage === 'memberlist'"
+      >
+        <mat-icon>supervisor_account</mat-icon>
+        <span>Members</span>
+      </button>
+      <button (click)="setActive('menu')" [class.active]="activePage === 'menu'">
+        <mat-icon>menu</mat-icon>
+        <span>Menu</span>
+      </button>
+    </nav>
+  </div>
+  

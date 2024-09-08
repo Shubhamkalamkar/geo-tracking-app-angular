@@ -1,0 +1,71 @@
+.member-list-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    li {
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  
+    input {
+      margin-left: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    mat-icon {
+      cursor: pointer;
+    }
+  
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+  
+  /* Floating + Icon */
+  .add-button {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    z-index: 1000;
+    background-color: #1976d2;
+    color: white;
+    width: 70px; /* Adjust the size of the button if needed */
+    height: 70px; /* Adjust the size of the button if needed */
+  }
+
+  .add-button:hover {
+    background-color: #115293;
+  }
+  
+  .add-button mat-icon {
+    font-size: 40px; /* Set the icon size to 45px */
+    width: 40px;
+    height: 40px;
+  }
+  

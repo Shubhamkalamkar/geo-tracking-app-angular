@@ -1,0 +1,61 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+.content-container {
+    flex-grow: 1; /* Take up all the available space */
+    overflow-y: auto; /* Enable scrolling if content is long */
+}
+
+.bottom-nav {
+    position: fixed; /* Fix the bottom navigation to stay at the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px; /* Fixed height for the bottom navigation */
+    background-color: white; /* Or any background you want */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: #555;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.bottom-nav button.active {
+    transform: scale(1.2);
+    color: #1976d2;
+}
+
+.bottom-nav button.active::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #1976d2;
+    margin-top: 6px;
+    border-radius: 2px;
+    animation: grow 0.3s ease-out;
+}
+
+/* Keyframes for the underline animation */
+@keyframes grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

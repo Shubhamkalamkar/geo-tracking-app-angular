@@ -1,0 +1,25 @@
+.form-control {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+
+  textarea {
+    resize: none;
+  }
+}
+
+.form-control-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 475px) {
+  .form-control-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

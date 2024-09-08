@@ -1,3 +1,1 @@
-export interface ILoginApiResponse {
-  token: string;
-}
+export interface ILoginApiResponse {}
