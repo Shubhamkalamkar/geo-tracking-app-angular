@@ -1,27 +1,14 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <mat-card appearance="outlined">
-    <mat-card-header>
-      <mat-card-title> Enter Mobile Number </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="form-control">
-        <!-- <label>Mobile Number</label> -->
-        <mat-form-field appearance="outline">
-          <input
-            matInput
-            type="number"
-            formControlName="mobileNumber"
-            (input)="trimNumber($event)"
-            placeholder="Mobile Number"
-          />
-          <mat-error>Enter correct Mobile Number</mat-error>
-        </mat-form-field>
-      </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <div class="button">
-        <button mat-flat-button color="primary" type="submit">Send Otp</button>
-      </div>
-    </mat-card-actions>
-  </mat-card>
-</form>
+@if(isLoading){
+<div class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+} @else {
+<div class="btn">
+  <button mat-stroked-button (click)="getCurrentLocation()">Refresh</button>
+</div>
+<div>
+  <h4>lat:{{ lat }}</h4>
+  <h4>lon:{{ lon }}</h4>
+  <h4>address:{{ address }}</h4>
+</div>
+}

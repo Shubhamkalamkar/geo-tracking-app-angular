@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "messwallaapp": {
+    "JioLocation": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/messwallaapp",
+            "outputPath": "dist/JioLocation",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "messwallaapp:build:production"
+              "buildTarget": "JioLocation:build:production"
             },
             "development": {
-              "buildTarget": "messwallaapp:build:development"
+              "buildTarget": "JioLocation:build:development"
             }
           },
           "defaultConfiguration": "development"

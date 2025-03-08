@@ -10,7 +10,7 @@ import {App} from '@capacitor/app'
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'messwallaapp';
+  title = 'JioLocation';
   constructor(private router: Router, private platform: Platform) {
     this.initializeApp();
   }

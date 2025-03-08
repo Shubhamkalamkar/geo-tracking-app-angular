@@ -1,9 +1,9 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.example.app',
-  appName: 'messwallaapp',
-  webDir: 'dist/messwallaapp/browser'
+  appId: 'com.shubham.app',
+  appName: 'jio location',
+  webDir: 'dist/JioLocation/browser'
 };
 
 export default config;
