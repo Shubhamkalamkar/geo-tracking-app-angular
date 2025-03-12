@@ -28,6 +28,7 @@
     "@capacitor/device": "^6.0.2",
     "@capacitor/dialog": "^6.0.2",
     "@capacitor/geolocation": "^6.1.0",
+    "@capacitor/push-notifications": "^6.0.4",
     "axios": "^1.8.1",
     "capacitor-native-settings": "^6.0.5",
     "cordova-plugin-request-location-accuracy": "^2.3.0",
