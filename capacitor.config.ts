@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.shubham.app',
-  appName: 'jio location',
+  appName: 'Gio location',
   webDir: 'dist/JioLocation/browser'
 };
 

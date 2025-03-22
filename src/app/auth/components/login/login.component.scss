@@ -8,13 +8,23 @@ mat-card {
     padding: 2rem;
   }
 }
+button {
+  width: 100px;
+}
 
 .btn {
   display: flex;
   justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .spinner {
   display: flex;
   justify-content: center;
+}
+
+h4 {
+  font-size: medium;
+  line-height: inherit;
 }

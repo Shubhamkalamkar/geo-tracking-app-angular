@@ -4,7 +4,30 @@
 </div>
 } @else {
 <div class="btn">
-  <button mat-stroked-button (click)="getCurrentLocation()">Refresh</button>
+  <button
+    [disabled]="isRefreshDisabled"
+    mat-stroked-button
+    (click)="getCurrentLocation()"
+  >
+    Refresh
+  </button>
+  @if(!serviceStatus){
+  <button
+    [disabled]="isButtonDisabled"
+    mat-stroked-button
+    (click)="startService()"
+  >
+    Start
+  </button>
+  } @else {
+  <button
+    [disabled]="isButtonDisabled"
+    mat-stroked-button
+    (click)="stopService()"
+  >
+    Stop
+  </button>
+  }
 </div>
 <div>
   <h4>lat:{{ lat }}</h4>

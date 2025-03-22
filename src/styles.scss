@@ -1,16 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
-@import 'ngx-toastr/toastr';
+@import "ngx-toastr/toastr";
 
 @include mat.core();
 
-@import './assets/scss/form-control.scss';
-@import './assets/scss/button.scss';
+@import "./assets/scss/form-control.scss";
+@import "./assets/scss/button.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
