@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
   /**
    * 2️⃣ Check Location Permission and Fetch Location
    */
-  getCurrentLocation = async (): Promise<boolean> => {
+  getCurrentLocation = async () => {
     this.isLoading = true; // Show spinner
     this.isRefreshDisabled = true;
 
@@ -79,7 +79,7 @@ export class LoginComponent implements OnInit {
         if (requestStatus.location !== 'granted') {
           await this.openSettings(true); // Open settings if permission is denied
           this.isLoading = false;
-          return false;
+          return;
         }
       }
 
@@ -117,7 +117,6 @@ export class LoginComponent implements OnInit {
       await this.getServiceStatus();
       this.isRefreshDisabled = false;
       console.log('get address=>>', result1);
-      return true;
     } catch (e: any) {
       console.log('Location error:', e);
       this.isRefreshDisabled = false;
@@ -126,20 +125,19 @@ export class LoginComponent implements OnInit {
       }
       this.toastr.error('Failed to fetch location', 'Error');
       this.isLoading = false;
-      return false;
     }
   };
 
   async startService() {
     try {
       this.isButtonDisabled = true;
-      let valid = await this.getCurrentLocation();
-      if (valid) {
+      // await this.getCurrentLocation();
+      // if (valid) {
         const result = await Location.startBackgroundService();
         await this.getServiceStatus();
         this.isButtonDisabled = false;
         console.log(result.message);
-      }
+      // }
     } catch (error) {
       this.isButtonDisabled = false;
       console.error('Error starting background service:', error);
